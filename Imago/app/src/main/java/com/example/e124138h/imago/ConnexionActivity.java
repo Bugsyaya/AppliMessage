@@ -1,47 +1,24 @@
 package com.example.e124138h.imago;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class MainActivity extends Activity {
+public class ConnexionActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        final Button inscription = (Button) findViewById(R.id.inscription);
-        inscription.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, InscriptionActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        final Button connexion = (Button) findViewById(R.id.connexion);
-        connexion.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ConnexionActivity.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_connexion);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_connexion, menu);
         return true;
     }
 
