@@ -123,12 +123,12 @@
                         android:text="Contacter un ami"
                         android:layout_weight=".5"
                         android:layout_marginTop="20dp"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:layout_gravity="right"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
-                        android:layout_marginRight="5dp" />
+                        android:layout_marginRight="10dp" />
 
                     <Button
                         android:id="@+id/attendre"
@@ -138,12 +138,12 @@
                         android:background="@color/dark"
                         android:text="Attendre un ami"
                         android:layout_weight="0.5"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
                         android:layout_alignTop="@+id/contacter"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginLeft="5dp" />
+                        android:layout_marginLeft="10dp" />
                 </RelativeLayout>
 
             </LinearLayout>

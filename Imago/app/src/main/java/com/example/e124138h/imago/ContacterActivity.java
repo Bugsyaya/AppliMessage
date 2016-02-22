@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import java.net.Socket;
 
@@ -19,6 +20,10 @@ public class ContacterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacter);
+
+
+        TextView pseudoAttente = (TextView) findViewById(R.id.pseudoAttente);
+        pseudoAttente.setText(MainActivity.getIpUtilisateur());
 
         final Button annulation = (Button) findViewById(R.id.annulation);
 

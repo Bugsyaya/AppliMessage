@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 public class AttendreActivity extends AppCompatActivity {
     Handler UIUpdateHandler;
@@ -15,6 +17,9 @@ public class AttendreActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attendre);
+
+        TextView pseudoAttente = (TextView) findViewById(R.id.pseudoAttente);
+        pseudoAttente.setText(MainActivity.getIpUtilisateur());
 
         final Button annulation = (Button) findViewById(R.id.annulation);
         annulation.setOnClickListener(new View.OnClickListener() {
@@ -35,7 +40,6 @@ public class AttendreActivity extends AppCompatActivity {
         @Override
         public void run() {
             //Connexion Réussie
-
             Intent intent = new Intent(AttendreActivity.this, BlablablaActivity.class);
             startActivity(intent);
         }

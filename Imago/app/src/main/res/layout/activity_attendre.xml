@@ -31,4 +31,25 @@
         android:layout_above="@+id/annulation"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="66dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ton adresse IP : "
+        android:textColor="@color/white"
+        android:id="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
+        android:text="IP"
+        android:id="@+id/pseudoAttente"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar" />
 </RelativeLayout>
