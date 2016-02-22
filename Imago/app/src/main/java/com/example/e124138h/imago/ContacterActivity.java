@@ -20,6 +20,16 @@ public class ContacterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacter);
 
+        final Button annulation = (Button) findViewById(R.id.annulation);
+
+        annulation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ContacterActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         editTextAddress = (EditText)findViewById(R.id.ipContact);
         editTextPort = "8080";
         buttonConnect = (Button)findViewById(R.id.lancement);
