@@ -9,9 +9,6 @@ import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.net.Socket;
 
-/**
- * Created by Marina on 21/02/2016.
- */
 public class BlaBlaBlaClient implements Runnable
 {
     private Socket socket;
@@ -47,7 +44,7 @@ public class BlaBlaBlaClient implements Runnable
         }
     }
 
-    public void sendMessage(String message)
+    public void sendMessage(Object message)
     {
         out.println(message);
         out.flush();
