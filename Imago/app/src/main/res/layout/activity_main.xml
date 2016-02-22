@@ -1,66 +1,172 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:id="@+id/Fond"
-    android:gravity="center_vertical"
-    android:orientation="vertical"
+    android:id="@+id/ScrollView01"
+    tools:context=".MainActivity"
+    android:layout_width="fill_parent"
     android:background="@drawable/border"
-    android:weightSum="100">
+    android:layout_height="fill_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:id="@+id/Fond"
+        android:gravity="center_vertical"
+        android:background="@drawable/border"
+        android:textColor="@color/white"
+        android:weightSum="100"
+        android:orientation="vertical">
 
-        <TextView
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="83dp"
-            android:text="Connectez-vous !"
-            android:background="@color/violetDark"
-            android:id="@+id/textView"
-            android:textIsSelectable="false"
-            android:textColor="#ffffff"
-            android:textStyle="bold"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:orientation="horizontal"  />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:weightSum="1"
+            android:layout_weight="181.25">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_weight="100"
-        android:layout_gravity="bottom">
+            <ImageView
+                android:id="@+id/image"
+                android:contentDescription="@string/content"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="134dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bienvenue sur Imago !"
+                    android:id="@+id/textView"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal|top" />
+
+                <TextView
+                    android:layout_width="146dp"
+                    android:layout_height="54dp"
+                    android:text="Ton adresse IP :"
+                    android:textColor="@color/white"
+                    android:id="@+id/textView4"
+                    android:layout_gravity="left|bottom" />
+
+                <TextView
+                    android:layout_width="185dp"
+                    android:layout_height="54dp"
+                    android:text="IP"
+                    android:textStyle="bold"
+                    android:textColor="@color/violetMoyen"
+                    android:id="@+id/ipGenerate"
+                    android:layout_gravity="right|bottom" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="385.94">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="83dp"
+                android:textColor="@color/white"
+                android:text="Avec cette application, tu pourra discuter et échanger des photos avec tes amis ! C&apos;est un peu comme ta messagerie par défaut... Mais en mieux !"
+                android:id="@+id/textView3" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="bottom">
+            android:orientation="horizontal"
+            android:layout_weight="251.56">
 
-        <Button
-            android:id="@+id/connexion"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:background="@color/violetMoyen"
-            android:text="Connexion" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom">
 
-        <Button
-            android:id="@+id/inscription"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:background="@color/violetDark"
-            android:layout_weight="50"
-            android:text="Inscription" />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="Choisis un Pseudo"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:id="@+id/pseudoAcc" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/contacter"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:background="@color/violetMoyen"
+                        android:text="Contacter un ami"
+                        android:layout_weight="1"
+                        android:layout_marginTop="20dp"
+                        android:layout_gravity="right"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginRight="5dp" />
+
+                    <Button
+                        android:id="@+id/attendre"
+                        android:layout_width="160dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:background="@color/violetDark"
+                        android:text="Attendre un ami"
+                        android:layout_alignTop="@+id/contacter"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="5dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:id="@+id/connexion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:background="@color/violetMoyen"
+                    android:text="Connexion" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inscription"
+                    android:textColor="@color/white"
+                    android:background="@color/violetDark"
+                    android:text="Inscription" />
+
+            </LinearLayout>-->
         </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+</ScrollView>
