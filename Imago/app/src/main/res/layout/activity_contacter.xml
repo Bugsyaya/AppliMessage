@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/violetLight"
+    android:background="@color/light"
     tools:context="com.example.e124138h.imago.ContacterActivity">
 
     <Button
@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="C'est parti"
         android:id="@+id/lancement"
-        android:background="@color/violetMoyen"
+        android:background="@color/blue"
         android:textColor="@color/white"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="Annuler"
         android:id="@+id/annulation"
-        android:background="@color/violetDark"
+        android:background="@color/dark"
         android:textColor="@color/white"
         android:layout_below="@+id/lancement"
         android:layout_alignParentLeft="true"

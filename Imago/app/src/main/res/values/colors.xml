@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="violetDark">#292929</color>
-    <color name="violetMoyen">#2d9ccc</color>
-    <color name="violetLight">#505050</color>
+    <color name="dark">#292929</color>
+    <color name="blue">#2d9ccc</color>
+    <color name="light">#505050</color>
     <color name="white">#ffffff</color>
 </resources>

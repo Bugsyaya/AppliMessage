@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/list_content"
         android:textColor="@color/white"
-        android:background="@color/violetMoyen"
+        android:background="@color/blue"
         android:text="sample"
         android:layout_width="match_parent"
         android:paddingBottom="10dip"

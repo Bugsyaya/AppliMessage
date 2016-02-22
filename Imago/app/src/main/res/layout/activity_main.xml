@@ -2,8 +2,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ScrollView01"
     tools:context=".MainActivity"
+    android:background="@color/light"
     android:layout_width="fill_parent"
-    android:background="@drawable/border"
+    android:orientation="vertical"
     android:layout_height="fill_parent">
 
     <LinearLayout
@@ -15,7 +16,6 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:id="@+id/Fond"
         android:gravity="center_vertical"
-        android:background="@drawable/border"
         android:textColor="@color/white"
         android:weightSum="100"
         android:orientation="vertical">
@@ -30,7 +30,6 @@
 
             <ImageView
                 android:id="@+id/image"
-                android:contentDescription="@string/content"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:src="@mipmap/ic_launcher" />
@@ -55,31 +54,33 @@
                     android:layout_gravity="center_horizontal|top" />
 
                 <TextView
-                    android:layout_width="146dp"
-                    android:layout_height="54dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Ton adresse IP :"
                     android:textColor="@color/white"
                     android:id="@+id/textView4"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="40dp"
                     android:layout_gravity="left|bottom" />
 
                 <TextView
-                    android:layout_width="185dp"
-                    android:layout_height="54dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="IP"
                     android:textStyle="bold"
-                    android:textColor="@color/violetMoyen"
+                    android:textColor="@color/blue"
                     android:id="@+id/ipGenerate"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="10dp"
                     android:layout_gravity="right|bottom" />
             </FrameLayout>
-
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="385.94">
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,8 +93,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_weight="251.56">
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,13 +116,15 @@
 
                     <Button
                         android:id="@+id/contacter"
-                        android:layout_width="160dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:background="@color/violetMoyen"
+                        android:background="@color/blue"
                         android:text="Contacter un ami"
-                        android:layout_weight="1"
+                        android:layout_weight=".5"
                         android:layout_marginTop="20dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:layout_gravity="right"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
@@ -130,11 +132,14 @@
 
                     <Button
                         android:id="@+id/attendre"
-                        android:layout_width="160dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/white"
-                        android:background="@color/violetDark"
+                        android:background="@color/dark"
                         android:text="Attendre un ami"
+                        android:layout_weight="0.5"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:layout_alignTop="@+id/contacter"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
@@ -142,31 +147,6 @@
                 </RelativeLayout>
 
             </LinearLayout>
-
-            <!--<LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_gravity="bottom">
-
-                <Button
-                    android:id="@+id/connexion"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/white"
-                    android:background="@color/violetMoyen"
-                    android:text="Connexion" />
-
-                <Button
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/inscription"
-                    android:textColor="@color/white"
-                    android:background="@color/violetDark"
-                    android:text="Inscription" />
-
-            </LinearLayout>-->
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>
