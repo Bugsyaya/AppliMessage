@@ -39,7 +39,6 @@ public class BlablablaActivity extends Activity
 {
     int REQUEST_CAMERA = 0, SELECT_FILE = 1;
     ImageView ivImage;
-    public UtilisateurDao utilisateurDao = new UtilisateurDao(this);
     public BlaBlaBlaClient blaBlaBlaClient;
 
     public ListView list;
@@ -60,8 +59,6 @@ public class BlablablaActivity extends Activity
         mStrings.add("Connection réussie");
 
         adapter = new ArrayAdapter<>(this, R.layout.list_black_text, R.id.list_content, mStrings);
-
-        Log.e("Table", mStrings.toString());
 
         list = (ListView) findViewById(R.id.listMessage);
 
@@ -96,11 +93,10 @@ public class BlablablaActivity extends Activity
 
         new Thread(blaBlaBlaClient).start();
 
-        utilisateurDao.createOrRetreive();
         client2 = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
-    public void envoyer(Object message)
+    public void envoyer(String message)
     {
         blaBlaBlaClient.sendMessage(message);
 
@@ -175,9 +171,7 @@ public class BlablablaActivity extends Activity
                     e.printStackTrace();
                 }
 
-                ivImage = (ImageView) findViewById(R.id.imageView2);
-                ivImage.setImageBitmap(thumbnail);
-
+                blaBlaBlaClient.sendImage(thumbnail);
             }
             else if (requestCode == SELECT_FILE)
             {
@@ -203,8 +197,7 @@ public class BlablablaActivity extends Activity
                 options.inJustDecodeBounds = false;
                 bm = BitmapFactory.decodeFile(selectedImagePath, options);
 
-                ivImage = (ImageView) findViewById(R.id.imageView2);
-                ivImage.setImageBitmap(bm);
+                blaBlaBlaClient.sendImage(bm);
             }
         }
     }
@@ -240,9 +233,20 @@ public class BlablablaActivity extends Activity
     class MessageHandler extends BlaBlaBlaMessageHandler {
         @Override
         public void run() {
-            adapter.add("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] " + Connexion.getInstance().getFriendName() + " : " + message);
-            adapter.notifyDataSetChanged();
-            list.setSelection(adapter.getCount() - 1);
+
+            if (type.equals("text"))
+            {
+                adapter.add("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] " + Connexion.getInstance().getFriendName() + " : " + message);
+                adapter.notifyDataSetChanged();
+                list.setSelection(adapter.getCount() - 1);
+            }
+            else
+            {
+                adapter.add("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] " + Connexion.getInstance().getFriendName() + " : " + image);
+                adapter.notifyDataSetChanged();
+                list.setSelection(adapter.getCount() - 1);
+            }
+
         }
     }
 }
