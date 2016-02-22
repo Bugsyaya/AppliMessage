@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_rowWeight="2"
+    android:background="@color/violetLight"
+    android:orientation="horizontal"
+    tools:context=".BlablablaActivity"
+    >
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/listMessage"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/linearLayout2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:id="@+id/linearLayout2"
+        android:background="@color/violetDark"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <EditText
+            android:id="@+id/smsBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5.66"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:background="@color/violetDark"
+            android:hint="Message à envoyer"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
+            android:layout_gravity="bottom"
+            android:layout_below="@+id/listView3"
+            android:layout_alignLeft="@+id/listView3"
+            android:layout_alignStart="@+id/listView3" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/photo"
+            android:src="@drawable/ic_menu_camera"
+            android:layout_weight="0"
+            android:background="@color/white"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <Button
+            android:id="@+id/envoyer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Envoyer"
+            android:textColor="@color/white"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip"
+            android:layout_alignParentBottom="true"
+            android:background="@color/violetMoyen"
+            android:layout_weight="0.5" />
+
+    </LinearLayout>
+
+</RelativeLayout>
